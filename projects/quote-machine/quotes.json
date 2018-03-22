@@ -1,0 +1,24 @@
+{
+  "quotes": {
+    "1": {
+      "auth": "Aesop",
+      "body": "Adventure is worthwhile"
+    },
+    "2": {
+      "auth": "We travel, some of us forever, to seek other places, other lives, other souls",
+      "body": "Anais Nin"
+    },
+    "3": {
+      "auth": "No place is ever as bad as they tell you it’s going to be",
+      "body": "Chuck Thompson"
+    },
+    "4": {
+      "auth": "Broad, wholesome, charitable views of men and things cannot be acquired by vegetating in one little corner of the earth all of one’s lifetime",
+      "body": "Mark Twain"
+    },
+    "5": {
+      "auth": "Travel and change of place impart new vigor to the mind",
+      "body": "Seneca"
+    }
+  }
+}
