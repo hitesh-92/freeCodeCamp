@@ -1,6 +1,11 @@
-body {
-  margin: ;
+.message{
+  background: yellow;
 }
+
+.tweet{
+  background-image:url("https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.seeklogo.net%2Fwp-content%2Fuploads%2F2014%2F12%2Ftwitter-logo-vector-download.jpg&f=1");
+}
+
 
 .sidebar {
         grid-area: sidebar;
@@ -29,7 +34,7 @@ body {
     }
 
     .box {
-        background-color: #444;
+        background-color: #abccce;
         color: #fff;
         border-radius: 5px;
         padding: 20px;
@@ -42,8 +47,10 @@ body {
     }
 
     .overlay {
-        background-color: red;
+        background-color: #72c3d3;
         z-index: 10;
         grid-column: content-start / content-end;
+
         grid-row: header-start / content-end;
+
     }
