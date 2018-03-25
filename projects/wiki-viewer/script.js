@@ -1,27 +1,48 @@
-document.getElementById('search-btn').addEventListener('click', getRes);
+$('body').hide(); $('body').fadeIn(500);
 
-function getRes(e) {
-    e.preventDefault();
-    console.log("getting");
+// var api ="https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&list=search&srsearch=";
+var url ="https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&list=search&srsearch=";
 
-    let body = document.getElementById('search-bar').value;
-    console.log(`\n${body}`);
+// var searchValue = document.getElementById('search-bar').value;
 
-    var uri = encodeURIComponent("https://en.wikipedia.org/wiki/Special:ApiSandbox#action=query&format=json&list=search&srsearch=dog&origin=*");
-    console.log(uri);
+$('document').ready(function() {
 
-    fetch('http://en.wikipedia.org//w/api.php?action=query&format=json&titles=batman&callback=?')
-    .then((res) => res.json())
-    .then((data) => {
-        console.log(`DATA: \n${data}`);
+    $('#form').on('submit', function(e){
+        e.preventDefault();
+
+        var searchValue = $('#search-bar').val();
+        var api = `https://en.wikipedia.org/w/api.php?action=query&origin=*&format=json&list=search&srsearch=${searchValue}`;
+        // console.log(api);
+
         
-    })
-    .catch((e) => {console.log(e)
-    });
+
+        var searchResults;
+
+        $.ajax({
+            'method': 'GET',
+            'async': false,
+            'url': api,
+            'dataType': 'json',
+            'success': (data) => { searchResults = data['query']['search'] }
+        });
+        
+        // console.log(searchResults);
+
+        $('ul#search-results').empty();
 
 
-    
-    
-    
-    
-}
+        for(var i = 0; i < searchResults.length; i++){
+            var title = searchResults[i].title;
+            var snippet = searchResults[i].snippet;
+            var href = `https://en.wikipedia.org/wiki/${searchResults[i].title}`;
+
+            var each = `<div class="each"> <a href="${href}">${title}</a> <br> <p class="snippet">${snippet}</p> <div><br>`;
+
+            $('#search-results').append(each);            
+        };
+
+    });//form
+
+
+
+});

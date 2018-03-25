@@ -13,7 +13,7 @@
     <div class="container">
         <div class="mb-4"></div>
         <div class="mb-5 text-center">
-            <h3>Search for a wiki</h3>
+            <h3>Wiki-viewr</h3>
         </div>
 
         <hr><br>
@@ -21,25 +21,42 @@
         <div class="main text-center ">
 
             <div class="random mb-5"><a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank">Random Wiki</a></div>
+
             
+            
+            <div class="container-search">
+
+                <form id="form">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <input type="search" class="form-control" id="search-bar" placeholder="search wikipedia">
+                        </div>
+
+                        <div class="col-sm-2">
+                            <button class="btn btn-primary fa fa-search" id="search-btn">search</button>
+                            <!-- <input type="submit" value="Search" class="btn btn-primary" id="search-btn"> -->
+                        </div>
+                    </div>
+                </form>
+            </div><!--.search-bar-->
+
+            <br><br><br>
+
             <div class="container">
 
-                <div class="row">
-                    <div class="col-sm-8">
-                            <input type="search" class="form-control" id="search-bar" placeholder="search wiki">
-                    </div>
-                    <div class="col-sm-4">
-                            <button class="btn btn-primary" id="search-btn">
-                                    search
-                            </button>
-                    </div>
-                </div>
-            </div><!--.search-bar-->
-            
+                <ul id="search-results" class="res"> <li><i>search for something!</i></li> </ul>
+                
+            </div>
+        
         </div>
-
+    
     </div>
- 
-<script src="script.js"></script>
+    
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>	
+    <script src="script.js"></script>
+
+    
+
 </body>
 </html>

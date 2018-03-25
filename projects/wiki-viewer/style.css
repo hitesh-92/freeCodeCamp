@@ -8,3 +8,11 @@
     margin-left: 10em;
 }
 
+.res{
+    list-style: none;
+}
+
+.each{
+    text-align: left;
+    border-bottom: 1px black solid;
+}
