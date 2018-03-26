@@ -1,0 +1,82 @@
+/* .btn{
+    border-radius: 10px;
+    border: 2px #205B71 solid;
+    color: #8AB3C2
+}
+ */
+body{
+    margin: auto;
+}
+
+#main{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    /* height: 10em; */
+    padding-top: 2.5em;
+    grid-auto-rows: minmax(15em, auto);
+
+}
+
+.left{
+    background: #447684;
+    border-right: 5px #3D5D66 solid;
+    /* padding: none; */
+    /* margin-top: 2em; */
+    
+}
+
+.right{
+    background: #426E7A;
+    grid-template-columns: 1fr 1fr 2fr;
+    
+    
+}
+
+.streamers{
+    background: #426E7A;
+
+}
+
+.btn{
+    position: sticky;
+    width: 5em;
+    height: 2em;
+    border: 1px #3D5D66 solid;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
+    margin-left: 4.5em;
+}
+
+
+.userDiv{
+    display: flex;
+    background: white;
+    height: 5em;
+    border-right: 5px #426E7A solid;
+    border-left: 5px #426E7A solid;
+}
+
+img{
+    margin-left: 4em;
+    margin-right: 1.5em;
+
+    width: 70px;
+    border-radius: 5em;
+}
+
+.displayName{
+    color: red;
+    text-decoration: none;
+    /* padding-left: 3em; */
+    padding-top: 1.5em;
+    /* margin-right: 5em; */
+    margin-left: 1.5em;
+    margin-right: 5em;
+    padding: none;
+}
+
+.status{
+    /* padding-left: 4em; */
+    padding-top: 1.5em;
+    font-family: 'Courier New', Courier, monospace
+}
