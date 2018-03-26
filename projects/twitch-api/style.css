@@ -59,9 +59,10 @@ body{
 img{
     margin-left: 4em;
     margin-right: 1.5em;
+    
 
     width: 70px;
-    border-radius: 5em;
+    /* border-radius: 5em; */
 }
 
 .displayName{
@@ -78,5 +79,6 @@ img{
 .status{
     /* padding-left: 4em; */
     padding-top: 1.5em;
-    font-family: 'Courier New', Courier, monospace
+    font-family: 'Courier New', Courier, monospace;
+    
 }
