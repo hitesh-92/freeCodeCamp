@@ -1,63 +1,93 @@
 // function translatePigLatin(str) {
+//   count = 0;
 //
-//   //funciton to first if first letter == vowel
-//   var check = function(letter){
-//     i = letter.toLowerCase();
-//     if(i=='a' || i=='e' || i=='i' || i=='o' || i=='u'){
-//       return true
-//     } else {
-//       return false
+//   while (true) {
+//     word = str.toLowerCase();
+//     for (i of word) {
+//       // console.log(i); //prints word
+//       if (i=='a'||i=='e'||i=='i'||i=='o'||i=='u'){
+//         break;
+//       } else {
+//         count += 1;
+//       }
 //     }
-//   };
+//     break
+//   };//while
 //
-//   //fuct to cut first letter append to end + 'ay'
-//   var piglatin = function(word){
-//     letter = word.substr(0,1)
-//     end = letter += 'ay'
-//     body = word.substr(1)
-//     return `${body}${end}`
-//   }
 //
-//   first = check(str[0])
+//   var result = function(word, count){
+//     // x = word.substr(count);
+//     // console.log(`x: ${x}`);
 //
-//   if (first){
-//     console.log(str += 'way');
-//   } else {
-//     console.log(piglatin(str));
-//     // return piglatin(str)
-//   }
+//     if (count == 0){
+//       return `${str}way`;
+//     } else if (count == 1){
+//       body = word.substr(1);
+//       letter = str[0];
+//       return `${body}${letter}ay`;
+//     } else {
+//       strLength = word.length;
+//       body = word.substr(count,strLength);
+//       first = word.substr(0,count);
+//       return `${body}${first}ay`
+//
+//
+//     }
+//   };//result
+//
+//   res = result(str, count)
+//   console.log(res);
+//
+//   // if (count == 1){
+//   //   return
+//   // }
+//
 //
 // }
 
-translatePigLatin("consonant");
+translatePigLatin("glove");
 
 
 //ANSWER
 
-
 function translatePigLatin(str) {
-  var check = function(letter){
-    i = letter.toLowerCase();
-    if(i=='a' || i=='e' || i=='i' || i=='o' || i=='u'){
-      return true
+  count = 0;
+
+  while (true) {
+    word = str.toLowerCase();
+    for (i of word) {
+      if (i=='a'||i=='e'||i=='i'||i=='o'||i=='u'){
+        break;
+      } else {
+        count += 1;
+      }
+    }
+    break
+  };
+
+
+  var result = function(word, count){
+
+    if (count == 0){
+
+      return `${str}way`;
+
+    } else if (count == 1){
+
+      body = word.substr(1);
+      letter = str[0];
+      return `${body}${letter}ay`;
+
     } else {
-      return false
+
+      strLength = word.length;
+      body = word.substr(count,strLength);
+      first = word.substr(0,count);
+      return `${body}${first}ay`
+
     }
   };
 
-  var piglatin = function(word){
-    letter = word.substr(0,1)
-    end = letter += 'ay'
-    body = word.substr(1)
-    return `${body}${end}`
-  }
-
-  first = check(str[0])
-
-  if (first){
-    return `${str}way`
-  } else {
-    return piglatin(str)
-  }
+  return result(str, count)
 
 }
