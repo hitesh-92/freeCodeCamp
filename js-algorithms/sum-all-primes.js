@@ -1,36 +1,50 @@
 function sumPrimes(num) {
   //var to hold total value to return
   let primes = new Array();
+  let total = 0;
 
   //func to find if num is prime
   function isPrime(value) {
 
-    if(value < 2) return false;
+    if(value < 2){
+      return false;
+    }
+
     for (var i = 2; i < value; i++) {
         if(value%i==0)
             return false;
     }
+
     return true;
   };//func
-
-  //loop nums until hit "num" and add primes to total
-  // let val;
-  // for (let i  = 0; i < 10; i++) {
-  //   val = nextPrime()
+  //## this function finds primes numbers too
+  // function isPrime(number) {
+  //   var start = 2;
+  //   while (start <= Math.sqrt(number)) {
+  //       if (number % start++ < 1) return false;
+  //   }
+  //   return number > 1;
   // }
 
 
-  for(var i = 0; i < num; i++){
-    if(isPrime(i)) {primes.push(i)};
+  for(let j = 2; j <= num; j++){
+    if(isPrime(j)) {primes.push(j)};
   }
 
-  let total;
 
-  for (i of primes) {
-    console.log(primes[i]);
+
+  for (let k = 0; k < primes.length; k++) {
+    // console.log(primes[k]);
+    total += primes[k];
   }
 
-  // return num;
+  console.log(primes.length);
+
+  console.log(total);
+
+  // console.log(primes);
+
 }
 
-sumPrimes(10);
+// sumPrimes(10);
+sumPrimes(977)
